@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+#ButtonGame{
+	padding-bottom: 5px;
+}
+
+#Store{
+	padding-top: 5px;
+}
+
+.Upgrade{
+  	background-color: black; /* Green */
+  	border: #1200FF;
+	border-style: ridge;
+  	color: white;
+  	width: 200px;
+	height: 100px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+ 	font-size: 16px;
+}	
+
+.ButtonImg{
+	width: 200px;
+	height: 200px;
+}

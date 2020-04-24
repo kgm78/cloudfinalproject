@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">	
+	<link rel="stylesheet" type="text/css" href="finalCSS.css">
+	<script src="script.js"></script>
+	<title>Kyle Site</title>
+</head>
+
+<body>
+	<h1>Kyle's Epic Clicker Game</h1>
+	<!-- The button game is here -->
+	<div id = "ButtonGame">
+		<p id = "score">0</p>
+		<button onClick = "increase()">Click</button>
+	</div>
+	<!-- Upgrade section -->
+	<div id = "Store">
+		<p id = "ShopDesc">Purchase upgrades to make your time easier!</p>
+		<p id = "SuccessFailure"></p><br/>
+		<img class = "ButtonImg"src="img/floridaman.png" alt="Florida Man">
+		<img class = "ButtonImg"src="img/hunter.png" alt="Hunter">
+		<img class = "ButtonImg"src="img/squad.png" alt="Hunter">
+
+
+
+		<br/>
+		<button class = "Upgrade" id = "PlusFive" onClick = "plusFiveLoopStart()"> Florida Man for 50 points!</button>
+		<button class = "Upgrade" id = "PlusTen" onClick = "plusTenLoopStart()"> Hunter for 100 points!</button>
+		<button class = "Upgrade" id = "PlusTwenty" onClick = "plusTwentyLoopStart()"> Lesquad for 100 points!</button>
+
+
+	</div>
+</body>
+</html>
