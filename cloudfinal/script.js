@@ -1,16 +1,15 @@
-// JavaScript Document
 var count = 0;
 var increment = 1;
 var plusFiveCost = 50;
 var plusTenCost = 100;
 var plusTwentyCost = 500;
-var plusFiftyCost = 1000;
-var plusHundredCost= 10000;
 //Increases count by 1
 function increase(){
-	count = count + increment;
+	count++;
 	document.getElementById("score").innerHTML = count;
 }
+
+
 //Starts plusFive every second
 function plusFiveLoopStart(){
 	//Tests to see if player can afford it the subtracts from count
@@ -48,13 +47,71 @@ function plusTenLoopStart(){
 
 	}
 }
+//Starts plusTwenty every second
+function plusTwentyLoopStart(){
+		if(count >= plusTwentyCost){
+		count = count - plusTwentyCost;
+		//Increase cost
+		plusTwentyCost = plusTwentyCost + 0.2 * plusTwentyCost;
+		plusTwentyCost = Math.trunc(plusTwentyCost);
+		document.getElementById("PlusTwenty").innerHTML = "Lesquad for " + plusTwentyCost +  " points!";
+		document.getElementById("score").innerHTML = count;
+		var plusTwentyCounter = setInterval(plusTwenty, 1000);
+		document.getElementById("SuccessFailure").innerHTML = "Bought";
+
+	}
+	else{
+		document.getElementById("SuccessFailure").innerHTML = "Failed: You do not have enough points!";
+
+	}
+}
+
 //Increases count by 5 every second
 function plusFive(){
-	count = count +5;
+	count = count + 5;
 	document.getElementById("score").innerHTML = count;
 }
 //Increases count by 10 every second
 function plusTen(){
-	count = count +10;
+	count = count + 10;
 	document.getElementById("score").innerHTML = count;
+}
+//Increases count by 20 every second
+function plusTwenty(){
+	count = count + 20;
+	document.getElementById("score").innerHTML = count;
+}
+
+//Calls AWS API
+async function callFloridaManDesc() {
+	fetch( ' https://cm9pe1vti7.execute-api.us-east-1.amazonaws.com/prod', {
+		method: 'GET'
+			})
+	.then(response => response.json())
+	.then((response) =>{
+		console.log(response);
+		document.getElementById("PlusFive").innerHTML = response.body;
+	});
+}
+
+async function callHunterDesc() {
+	fetch( 'https://qhbdhgm9ia.execute-api.us-east-1.amazonaws.com/prod', {
+		method: 'GET'
+			})
+	.then(response => response.json())
+	.then((response) =>{
+		console.log(response);
+		document.getElementById("PlusTen").innerHTML = response.body;
+	});
+}
+
+async function callSquadDesc() {
+	fetch( 'https://0qxyfzuedk.execute-api.us-east-1.amazonaws.com/prod', {
+		method: 'GET'
+			})
+	.then(response => response.json())
+	.then((response) =>{
+		console.log(response);
+		document.getElementById("PlusTwenty").innerHTML = response.body;
+	});
 }

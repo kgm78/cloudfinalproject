@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">	
+	<link rel="stylesheet" type="text/css" href="finalCSS.css">
+	<title>Kyle Site</title>
+	<script src="script.js"></script>
+
+</head>
+<body>
+		<!-- The button game is here -->
+		<div id = "ButtonGame">
+			<p>This is the Epic Clicker Game by Kyle</p>
+		</div>
+		<!-- Links for the two webpages -->
+		<div id = "Links">
+			<a class = "Links" href="index.html">Information</a>
+			<a class = "Links" href="clicker.html">The Game!</a>
+		</div>
+		<!-- Upgrade section -->
+		<div id = "Store">
+			<p id = "ShopDesc">This is a simple idle/clicker game. Click on each button below to see what each shop item does!</p>
+			<p id = "SuccessFailure"></p>
+			<br/>
+			<img class = "ButtonImg" src="img/floridaman.png" alt="Florida Man">
+			<img class = "ButtonImg" src="img/hunter.png" alt="Hunter">
+			<img class = "ButtonImg" src="img/squad.png" alt="Hunter">
+			<br/>
+			<button class = "Upgrade" id = "PlusFive" onClick = "callFloridaManDesc()"> Florida Man </button>
+			<button class = "Upgrade" id = "PlusTen" onClick = "callHunterDesc()"> Hunter </button>
+			<button class = "Upgrade" id = "PlusTwenty" onClick = "callSquadDesc()"> Lesquad </button>
+		</div>
+	</body>
+</html>

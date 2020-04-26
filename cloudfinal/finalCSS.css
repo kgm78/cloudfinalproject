@@ -1,15 +1,55 @@
 @charset "utf-8";
 /* CSS Document */
-#ButtonGame{
-	padding-bottom: 5px;
-}
 
-#Store{
+
+#ButtonGame{
+	text-align: center;
+	font-size: 50px;
+	color: aqua;
+	background-color: black;
+	padding-bottom: 5px;
 	padding-top: 5px;
 }
 
+#Increase{
+	background-color: white;
+  	border: #1200FF;
+	border-style: ridge;
+  	color: black;
+  	width: 200px;
+	height: 100px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+ 	font-size: 16px;
+}
+
+#ShopDesc{
+	font-size: 20px;
+}
+
+#Store{
+	padding-top: 50px;
+	padding-bottom: 100%;
+	padding-right: 20px;
+	align-content: center;
+	background-color: darkgray;
+	text-align: center;
+}
+
+#Links{
+	background-color: #1200FF;
+	padding-left: 45%;
+}
+
+.Links{
+	color: white;
+	font-size: 20px;
+	padding-right: 5%;
+}
+
 .Upgrade{
-  	background-color: black; /* Green */
+  	background-color: black;
   	border: #1200FF;
 	border-style: ridge;
   	color: white;
